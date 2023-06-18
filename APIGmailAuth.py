@@ -1,7 +1,7 @@
 from google_auth_oauthlib.flow import Flow
 import google.auth.transport.requests as GglRequest
 
-SCFILE = "client_secret_199415634341-v2q2jj5e8fp44b6q40pbh6dd2n0jvaff.apps.googleusercontent.com.json"
+SCFILE = "client_secret_199415634341-h0u1eqhbgh6q1b49fsjtlpqnba0rs6f2.apps.googleusercontent.com.json"
 
 flowSession = Flow.from_client_secrets_file(SCFILE, ["https://www.googleapis.com/auth/gmail.send"], redirect_uri = "https://github.com/DylanMRoe/mail-bulk-sender")
 
@@ -14,4 +14,3 @@ code = input("Enter the code: ")
 flowSession.fetch_token(code=code)
 
 creds = flowSession.credentials
-
